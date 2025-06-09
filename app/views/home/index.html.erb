@@ -2,3 +2,40 @@
   sconti: "CODICE: EXTRA | -20% sull'outlet. -30% sopra i 60€", 
   links: ["Uomo", "Donna", "Bambini", "Sport", "Heritage", "Culture", "Mid-Season Sales"] 
 } %>
+
+
+
+<%= render 'components/hero', title: 'Atomo Star', subtitle: 'Principles of Italian Innovation',
+image_url: 'https://cdn.pixabay.com/photo/2024/08/03/10/09/construction-8941880_1280.jpg' %>
+
+
+
+<%= render partial: 'components/testo', locals: { 
+  title: "CHI C’È DIETRO PUNTO ZERO",
+  testo: ""
+  
+} %>
+
+
+<%= render partial: 'components/chisiamo' %>
+
+
+<div class="max-w-sm mx-auto bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300">
+  <img class="w-full h-48 object-cover" src="https://source.unsplash.com/400x300/?portrait" alt="profile">
+  <div class="p-6">
+    <h2 class="text-2xl font-semibold text-gray-800">Giulia Ferri</h2>
+    <p class="text-gray-600 mt-2">Web Designer & UI/UX Specialist</p>
+    <div class="mt-4">
+      <button class="bg-blue-500 text-white px-4 py-2 rounded-xl hover:bg-blue-600 transition duration-200">Segui</button>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+</div>
+
+
