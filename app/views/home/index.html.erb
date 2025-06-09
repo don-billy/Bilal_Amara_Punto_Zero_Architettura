@@ -19,17 +19,171 @@ image_url: 'https://cdn.pixabay.com/photo/2024/08/03/10/09/construction-8941880_
 
 <%= render partial: 'components/chisiamo' %>
 
+<div class=" flex items-center justify-center gap-4 bg-[#F9F9F6]">
+  <div class="flex-1 h-px bg-gradient-to-r from-transparent via-[#b08d57] to-transparent bg-[#F9F9F6]"></div>
+  <div class="w-6 h-6 border-2 border-[#b08d57] rounded-full flex items-center justify-center bg-[#F9F9F6]">
+    <div class="w-2 h-2 bg-[#b08d57] rounded-full "></div>
+  </div>
+  <div class="flex-1 h-px bg-gradient-to-l from-transparent via-[#b08d57] to-transparent bg-[#F9F9F6]"></div>
+</div>
 
-<div class="max-w-sm mx-auto bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300">
-  <img class="w-full h-48 object-cover" src="https://source.unsplash.com/400x300/?portrait" alt="profile">
-  <div class="p-6">
-    <h2 class="text-2xl font-semibold text-gray-800">Giulia Ferri</h2>
-    <p class="text-gray-600 mt-2">Web Designer & UI/UX Specialist</p>
-    <div class="mt-4">
-      <button class="bg-blue-500 text-white px-4 py-2 rounded-xl hover:bg-blue-600 transition duration-200">Segui</button>
-    </div>
+
+<%= render partial: 'components/testo', locals: { 
+  title: "SERVIZI",
+  testo: "Ecco una lista dei nostri principali servizi"
+  
+} %>
+
+
+<div class="max-w-full mx-auto px-6 md:px-16 lg:px-24 py-20 bg-[#F9F9F6]">
+  <div
+    class="flex flex-wrap gap-8 justify-center mt-5"
+  >
+    <% flipcard = [
+      {
+        titolo: 'Progettazione',
+        descrizione: 'Offriamo progettazione su misura per spazi innovativi, funzionali e sostenibili, con attenzione a ogni dettaglio.',
+        immagine_url: 'https://cdn-icons-png.freepik.com/256/8075/8075835.png?ga=GA1.1.2017300332.1731582518&semt=ais_incoming'
+      },
+      {
+        titolo: 'Interior Design',
+        descrizione: 'Creiamo ambienti interni eleganti e funzionali, armonizzando stile e comfort per ogni cliente.',
+        immagine_url: 'https://cdn-icons-png.freepik.com/256/404/404117.png?ga=GA1.1.2017300332.1731582518&semt=ais_incoming'
+      },
+      {
+        titolo: 'Project Management',
+        descrizione: 'Gestiamo il progetto dall’inizio alla fine garantendo tempi, costi e qualità eccellenti.',
+        immagine_url: 'https://cdn-icons-png.freepik.com/256/7305/7305792.png?ga=GA1.1.2017300332.1731582518&semt=ais_incoming'
+      },
+      {
+        titolo: 'Consulenza Sostenibile',
+        descrizione: 'Supportiamo scelte eco-friendly per ridurre l’impatto ambientale dei vostri spazi.',
+        immagine_url: 'https://cdn-icons-png.freepik.com/256/271/271800.png?ga=GA1.1.2017300332.1731582518&semt=ais_incoming'
+      },
+      {
+        titolo: 'Rendering 3D',
+        descrizione: 'Visualizziamo in modo realistico ogni progetto per anticiparne l’effetto finale.',
+        immagine_url: 'https://cdn-icons-png.freepik.com/256/9869/9869633.png?ga=GA1.1.2017300332.1731582518&semt=ais_incoming'
+      },
+      {
+        titolo: 'Supporto Post-vendita',
+        descrizione: 'Forniamo assistenza continua e supporto per mantenere i vostri spazi sempre perfetti.',
+        immagine_url: 'https://cdn-icons-png.freepik.com/256/10962/10962470.png?ga=GA1.1.2017300332.1731582518&semt=ais_incoming'
+      }
+    ] %>
+
+    <% flipcard.each do |servizio| %>
+      <%= render partial: "components/flipcard", locals: {
+            titolo: servizio[:titolo],
+            descrizione: servizio[:descrizione],
+            immagine_url: servizio[:immagine_url]
+          } %>
+    <% end %>
   </div>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="w-full px-6 md:px-12 py-20 bg-[#F9F9F6]">
+  <h2 class="text-5xl font-extrabold text-[#A3B18A] text-center">Portfolio & Testimonianze</h2>
+  <br><br><br>
+
+  <div class="flex flex-col lg:flex-row gap-16 items-center">
+    
+    <!-- Portfolio -->
+    <div class="w-full lg:w-1/2">
+  <h3 class="text-2xl font-semibold text-gray-700 text-center mb-12 border-b-2 border-[#cd7f32] inline-block pb-2">Progetti recenti</h3>
+
+  <!-- Layout mobile -->
+  <div class="flex flex-wrap gap-4 justify-center items-center md:hidden">
+    <img src="https://cdn.pixabay.com/photo/2021/12/22/10/59/tunnel-6887276_1280.jpg" class="w-36 h-36 object-cover rounded-lg border-4 border-white shadow-md" alt="Foto 1" />
+    <img src="https://cdn.pixabay.com/photo/2022/08/10/17/31/bridge-7377716_1280.jpg" class="w-36 h-36 object-cover rounded-lg border-4 border-white shadow-md" alt="Foto 2" />
+    <img src="https://cdn.pixabay.com/photo/2016/11/21/12/26/tunnel-1845046_1280.jpg" class="w-36 h-36 object-cover rounded-lg border-4 border-white shadow-md" alt="Foto 3" />
+    <img src="https://cdn.pixabay.com/photo/2019/06/15/16/37/tunnel-4276025_1280.jpg" class="w-36 h-36 object-cover rounded-lg border-4 border-white shadow-md" alt="Foto 4" />
+    <img src="https://cdn.pixabay.com/photo/2020/05/02/17/54/tunnel-5122424_1280.jpg" class="w-36 h-36 object-cover rounded-lg border-4 border-white shadow-md" alt="Foto 5" />
+    <img src="https://cdn.pixabay.com/photo/2015/12/03/00/58/architect-1073599_1280.jpg" class="w-36 h-36 object-cover rounded-lg border-4 border-white shadow-md" alt="Foto 6" />
+    <img src="https://cdn.pixabay.com/photo/2023/01/02/13/03/architect-7692052_1280.jpg" class="w-36 h-36 object-cover rounded-lg border-4 border-white shadow-md" alt="Foto 7" />
+    <img src="https://cdn.pixabay.com/photo/2020/01/20/22/21/palace-4781577_1280.jpg" class="w-36 h-36 object-cover rounded-lg border-4 border-white shadow-md" alt="Foto 8" />
+  </div>
+
+  <!-- Layout desktop -->
+  <div class="relative mx-auto hidden md:block h-[600px] max-w-[500px]">
+    <img src="https://cdn.pixabay.com/photo/2021/12/22/10/59/tunnel-6887276_1280.jpg"
+      class="absolute top-0 left-[-95%] w-28 h-28 md:w-60 md:h-60 object-cover rounded-lg border-8 border-white shadow-xl rotate-[-6deg] z-10" alt="Foto 1" />
+    <img src="https://cdn.pixabay.com/photo/2022/08/10/17/31/bridge-7377716_1280.jpg"
+      class="absolute top-6 left-[-35%] w-28 h-28 md:w-60 md:h-60 object-cover rounded-lg border-8 border-white shadow-xl rotate-[4deg] z-20" alt="Foto 2" />
+    <img src="https://cdn.pixabay.com/photo/2016/11/21/12/26/tunnel-1845046_1280.jpg"
+      class="absolute top-0 left-[18%] w-28 h-28 md:w-60 md:h-60 object-cover rounded-lg border-8 border-white shadow-xl rotate-[-2deg] z-10" alt="Foto 3" />
+    <img src="https://cdn.pixabay.com/photo/2019/06/15/16/37/tunnel-4276025_1280.jpg"
+      class="absolute top-10 left-[85%] w-28 h-28 md:w-60 md:h-60 object-cover rounded-lg border-8 border-white shadow-xl rotate-[5deg] z-20" alt="Foto 4" />
+    <img src="https://cdn.pixabay.com/photo/2020/05/02/17/54/tunnel-5122424_1280.jpg"
+      class="absolute top-[50%] left-[-95%] w-28 h-28 md:w-60 md:h-60 object-cover rounded-lg border-8 border-white shadow-xl rotate-[2deg] z-10" alt="Foto 5" />
+    <img src="https://cdn.pixabay.com/photo/2015/12/03/00/58/architect-1073599_1280.jpg"
+      class="absolute top-[54%] left-[-32%] w-28 h-28 md:w-60 md:h-60 object-cover rounded-lg border-8 border-white shadow-xl rotate-[-3deg] z-20" alt="Foto 6" />
+    <img src="https://cdn.pixabay.com/photo/2023/01/02/13/03/architect-7692052_1280.jpg"
+      class="absolute top-[50%] left-[22%] w-28 h-28 md:w-60 md:h-60 object-cover rounded-lg border-8 border-white shadow-xl rotate-[4deg] z-10" alt="Foto 7" />
+    <img src="https://cdn.pixabay.com/photo/2020/01/20/22/21/palace-4781577_1280.jpg"
+      class="absolute top-[58%] left-[85%] w-28 h-28 md:w-60 md:h-60 object-cover rounded-lg border-8 border-white shadow-xl rotate-[-5deg] z-20" alt="Foto 8" />
+  </div>
+</div>
+
+
+    <!-- Testimonianze -->
+    <div class="w-full lg:w-1/2 bg-[#FAF8F5] rounded-lg p-8 ">
+      <h3 class="text-2xl font-semibold text-gray-700 mb-6 border-b-2 border-bronze-500 inline-block pb-2">Cosa dicono i clienti</h3>
+
+      <div class="space-y-8">
+        <div class="flex items-center gap-4">
+          <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Cliente 1" class="w-14 h-14 rounded-full object-cover border-2 border-bronze-500">
+          <div>
+            <p class="text-gray-800 italic">"Un team professionale e attento ai dettagli, il progetto ha superato le nostre aspettative!"</p>
+            <p class="font-semibold text-bronze-600 mt-2">— Maria Rossi</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-4">
+          <img src="https://randomuser.me/api/portraits/men/52.jpg" alt="Cliente 2" class="w-14 h-14 rounded-full object-cover border-2 border-bronze-500">
+          <div>
+            <p class="text-gray-800 italic">"Assistenza impeccabile e risultati di alta qualità, lo consiglio a chi cerca serietà."</p>
+            <p class="font-semibold text-bronze-600 mt-2">— Luca Bianchi</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-4">
+          <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Cliente 3" class="w-14 h-14 rounded-full object-cover border-2 border-bronze-500">
+          <div>
+            <p class="text-gray-800 italic">"Ottima comunicazione e risultati perfetti, un piacere lavorare insieme."</p>
+            <p class="font-semibold text-bronze-600 mt-2">— Elena Verdi</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<style>
+  /* Colore bronzo personalizzato */
+  .border-bronze-500 {
+    border-color: #b87333;
+  }
+  .text-bronze-600 {
+    color: #b87333;
+  }
+</style>
+
+
+
+
+
+
 
 
 

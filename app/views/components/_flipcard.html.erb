@@ -1,0 +1,27 @@
+
+<div
+  class="w-80 h-96 flex-shrink-0 [perspective:1000px] group cursor-pointer mx-auto mt"
+  tabindex="0"
+  role="button"
+  aria-pressed="false"
+  onkeydown="if(event.key==='Enter' || event.key===' ') this.querySelector('.card-inner').classList.toggle('rotate-y-180')"
+>
+  <div
+    class="card-inner relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] rounded-2xl shadow-lg"
+  >
+    <!-- Fronte -->
+    <div
+      class="absolute w-full h-full bg-[#A3B18A] rounded-2xl shadow-lg flex flex-col items-center justify-center p-8 space-y-6 [backface-visibility:hidden]"
+    >
+      <img src="<%= immagine_url %>" alt="<%= titolo %>" class="w-20 h-20 object-cover rounded-full shadow-lg" />
+      <h3 class="text-white text-3xl font-bold text-center"><%= titolo %></h3>
+    </div>
+
+    <!-- Retro -->
+    <div
+      class="absolute w-full h-full bg-[#B06C49] rounded-2xl shadow-lg [transform:rotateY(180deg)] flex items-center justify-center p-8 [backface-visibility:hidden]"
+    >
+      <p class="text-white text-xl font-medium leading-relaxed text-center"><%= descrizione %></p>
+    </div>
+  </div>
+</div>
