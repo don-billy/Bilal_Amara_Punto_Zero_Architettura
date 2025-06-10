@@ -1,181 +1,190 @@
 <body class="bg-[#F9F9F6]">
 
+  <%= render partial: 'components/navbar', locals: { 
+        links: ["Storia ", "Servizi", "Portfolio", "Testimonianze", "Contatti", "Sponsor"] 
+      } 
+  %>
 
+  <%= render 'components/hero', 
+        titolo: 'Progettiamo spazi innovativi e sostenibili', 
+        testo: 'Architettura moderna per privati e aziende, con un’attenzione particolare alla sostenibilità ambientale e al design funzionale.',
+        bottone: 'Scopri i nostri progetti', 
+        image_url: 'https://cdn.pixabay.com/photo/2024/08/03/10/09/construction-8941880_1280.jpg' 
+  %>
 
+  <%= render partial: 'components/testo', locals: { 
+        title: "CHI C’È DIETRO PUNTO ZERO",
+        testo: ""
+      } 
+  %>
 
-<%= render partial: 'components/navbar', locals: { 
-  sconti: "CODICE: EXTRA | -20% sull'outlet. -30% sopra i 60€", 
-  links: ["Uomo", "Donna", "Bambini", "Sport", "Heritage", "Culture", "Mid-Season Sales"] 
-} %>
+  <%= render partial: 'components/chisiamo', locals: { 
+        testo1: "Dietro ogni progetto di Punto Zero c’è un team affiatato di professionisti con competenze trasversali e una visione condivisa: trasformare ogni spazio in un’opera unica, funzionale e sostenibile.",
+        testo2: "Grazie alla collaborazione tra architetti, interior designer e project manager, garantiamo un risultato che unisce estetica e innovazione."
+      } 
+  %>
 
-
-
-<%= render 'components/hero', 
-titolo: 'Progettiamo spazi innovativi e sostenibili', 
-testo: 'Architettura moderna per privati e aziende, con un’attenzione particolare alla sostenibilità ambientale e al design funzionale.',
-bottone: 'Scopri i nostri progetti', 
-image_url: 'https://cdn.pixabay.com/photo/2024/08/03/10/09/construction-8941880_1280.jpg'
-
-
-%>
-
-
-
-<%= render partial: 'components/testo', locals: { 
-  title: "CHI C’È DIETRO PUNTO ZERO",
-  testo: ""
-  
-} %>
-
-<%= render partial: 'components/chisiamo', locals: { 
-  testo1: "Dietro ogni progetto di Punto Zero c’è un team affiatato di professionisti con competenze trasversali e una visione condivisa: trasformare ogni spazio in un’opera unica, funzionale e sostenibile.",
-  testo2: "Grazie alla collaborazione tra architetti, interior designer e project manager, garantiamo un risultato che unisce estetica e innovazione."
-} %>
-
-
-<div class=" flex items-center justify-center gap-4 bg-[#F9F9F6]">
-  <div class="flex-1 h-px bg-gradient-to-r from-transparent via-[#b08d57] to-transparent bg-[#F9F9F6]"></div>
-  <div class="w-6 h-6 border-2 border-[#b08d57] rounded-full flex items-center justify-center bg-[#F9F9F6]">
-    <div class="w-2 h-2 bg-[#b08d57] rounded-full "></div>
+  <div class="flex items-center justify-center gap-4 bg-[#F9F9F6]">
+    <div class="flex-1 h-px bg-gradient-to-r from-transparent via-[#b08d57] to-transparent"></div>
+    <div class="w-6 h-6 border-2 border-[#b08d57] rounded-full flex items-center justify-center bg-[#F9F9F6]">
+      <div class="w-2 h-2 bg-[#b08d57] rounded-full"></div>
+    </div>
+    <div class="flex-1 h-px bg-gradient-to-l from-transparent via-[#b08d57] to-transparent"></div>
   </div>
-  <div class="flex-1 h-px bg-gradient-to-l from-transparent via-[#b08d57] to-transparent bg-[#F9F9F6]"></div>
-</div>
 
+  <%= render partial: 'components/testo', locals: { 
+        title: "SERVIZI",
+        testo: "Ecco una lista dei nostri principali servizi"
+      } 
+  %>
 
-<%= render partial: 'components/testo', locals: { 
-  title: "SERVIZI",
-  testo: "Ecco una lista dei nostri principali servizi"
-  
-} %>
+  <div class="max-w-full mx-auto px-6 md:px-16 lg:px-24 py-20 bg-[#F9F9F6]">
+    <div class="flex flex-wrap gap-8 justify-center mt-5">
+      <% flipcard = [
+          {
+            titolo: 'Progettazione',
+            descrizione: 'Offriamo progettazione su misura per spazi innovativi, funzionali e sostenibili, con attenzione a ogni dettaglio.',
+            immagine_url: 'https://cdn-icons-png.freepik.com/256/8075/8075835.png?ga=GA1.1.2017300332.1731582518&semt=ais_incoming'
+          },
+          {
+            titolo: 'Interior Design',
+            descrizione: 'Creiamo ambienti interni eleganti e funzionali, armonizzando stile e comfort per ogni cliente.',
+            immagine_url: 'https://cdn-icons-png.freepik.com/256/404/404117.png?ga=GA1.1.2017300332.1731582518&semt=ais_incoming'
+          },
+          {
+            titolo: 'Project Management',
+            descrizione: 'Gestiamo il progetto dall’inizio alla fine garantendo tempi, costi e qualità eccellenti.',
+            immagine_url: 'https://cdn-icons-png.freepik.com/256/7305/7305792.png?ga=GA1.1.2017300332.1731582518&semt=ais_incoming'
+          },
+          {
+            titolo: 'Consulenza Sostenibile',
+            descrizione: 'Supportiamo scelte eco-friendly per ridurre l’impatto ambientale dei vostri spazi.',
+            immagine_url: 'https://cdn-icons-png.freepik.com/256/271/271800.png?ga=GA1.1.2017300332.1731582518&semt=ais_incoming'
+          },
+          {
+            titolo: 'Rendering 3D',
+            descrizione: 'Visualizziamo in modo realistico ogni progetto per anticiparne l’effetto finale.',
+            immagine_url: 'https://cdn-icons-png.freepik.com/256/9869/9869633.png?ga=GA1.1.2017300332.1731582518&semt=ais_incoming'
+          },
+          {
+            titolo: 'Supporto Post-vendita',
+            descrizione: 'Forniamo assistenza continua e supporto per mantenere i vostri spazi sempre perfetti.',
+            immagine_url: 'https://cdn-icons-png.freepik.com/256/10962/10962470.png?ga=GA1.1.2017300332.1731582518&semt=ais_incoming'
+          }
+        ] 
+      %>
 
-
-<div class="max-w-full mx-auto px-6 md:px-16 lg:px-24 py-20 bg-[#F9F9F6]">
-  <div
-    class="flex flex-wrap gap-8 justify-center mt-5"
-  >
-    <% flipcard = [
-      {
-        titolo: 'Progettazione',
-        descrizione: 'Offriamo progettazione su misura per spazi innovativi, funzionali e sostenibili, con attenzione a ogni dettaglio.',
-        immagine_url: 'https://cdn-icons-png.freepik.com/256/8075/8075835.png?ga=GA1.1.2017300332.1731582518&semt=ais_incoming'
-      },
-      {
-        titolo: 'Interior Design',
-        descrizione: 'Creiamo ambienti interni eleganti e funzionali, armonizzando stile e comfort per ogni cliente.',
-        immagine_url: 'https://cdn-icons-png.freepik.com/256/404/404117.png?ga=GA1.1.2017300332.1731582518&semt=ais_incoming'
-      },
-      {
-        titolo: 'Project Management',
-        descrizione: 'Gestiamo il progetto dall’inizio alla fine garantendo tempi, costi e qualità eccellenti.',
-        immagine_url: 'https://cdn-icons-png.freepik.com/256/7305/7305792.png?ga=GA1.1.2017300332.1731582518&semt=ais_incoming'
-      },
-      {
-        titolo: 'Consulenza Sostenibile',
-        descrizione: 'Supportiamo scelte eco-friendly per ridurre l’impatto ambientale dei vostri spazi.',
-        immagine_url: 'https://cdn-icons-png.freepik.com/256/271/271800.png?ga=GA1.1.2017300332.1731582518&semt=ais_incoming'
-      },
-      {
-        titolo: 'Rendering 3D',
-        descrizione: 'Visualizziamo in modo realistico ogni progetto per anticiparne l’effetto finale.',
-        immagine_url: 'https://cdn-icons-png.freepik.com/256/9869/9869633.png?ga=GA1.1.2017300332.1731582518&semt=ais_incoming'
-      },
-      {
-        titolo: 'Supporto Post-vendita',
-        descrizione: 'Forniamo assistenza continua e supporto per mantenere i vostri spazi sempre perfetti.',
-        immagine_url: 'https://cdn-icons-png.freepik.com/256/10962/10962470.png?ga=GA1.1.2017300332.1731582518&semt=ais_incoming'
-      }
-    ] %>
-
-    <% flipcard.each do |servizio| %>
-      <%= render partial: "components/flipcard", locals: {
-            titolo: servizio[:titolo],
-            descrizione: servizio[:descrizione],
-            immagine_url: servizio[:immagine_url]
-          } %>
-    <% end %>
+      <% flipcard.each do |servizio| %>
+        <%= render partial: "components/flipcard", locals: {
+              titolo: servizio[:titolo],
+              descrizione: servizio[:descrizione],
+              immagine_url: servizio[:immagine_url]
+            } 
+        %>
+      <% end %>
+    </div>
   </div>
-</div>
+
+  <%= render partial: 'components/portfolio_testimonianze', locals: {
+        titolo_principale: "Portfolio & Testimonianze",
+        titolo_portfolio: "Progetti recenti",
+        titolo_testimonianze: "Cosa dicono i clienti",
+
+        img1: "https://cdn.pixabay.com/photo/2020/08/03/15/53/castle-5460374_1280.jpg",
+        img2: "https://cdn.pixabay.com/photo/2022/12/17/12/34/people-7661651_1280.jpg",
+        img3: "https://cdn.pixabay.com/photo/2020/05/19/11/41/space-5190377_1280.jpg",
+        img4: "https://cdn.pixabay.com/photo/2020/05/02/17/54/tunnel-5122424_1280.jpg",
+        img5: "https://cdn.pixabay.com/photo/2020/03/28/15/20/tunnel-4977439_1280.jpg",
+        img6: "https://cdn.pixabay.com/photo/2023/01/06/13/33/palace-7701252_1280.jpg",
+        img7: "https://cdn.pixabay.com/photo/2020/12/09/21/03/dome-5818580_1280.jpg",
+        img8: "https://cdn.pixabay.com/photo/2016/08/04/21/31/reichstag-dome-1571046_1280.jpg",
+
+        foto_cliente1: "https://randomuser.me/api/portraits/women/68.jpg",
+        testimonianza1: '"Un team professionale e attento ai dettagli, il progetto ha superato le nostre aspettative!"',
+        nome_cliente1: "Maria Rossi",
+
+        foto_cliente2: "https://randomuser.me/api/portraits/men/52.jpg",
+        testimonianza2: '"Assistenza impeccabile e risultati di alta qualità, lo consiglio a chi cerca serietà."',
+        nome_cliente2: "Luca Bianchi",
+
+        foto_cliente3: "https://randomuser.me/api/portraits/women/44.jpg",
+        testimonianza3: '"Ottima comunicazione e risultati perfetti, un piacere lavorare insieme."',
+        nome_cliente3: "Elena Verdi"
+      } 
+  %>
+
+  <%= render partial: 'components/contatti', locals: { 
+        titolo: "Hai un'idea? Realizziamola insieme.",
+        testo: "Sono sempre aperto a nuove collaborazioni. Se hai un progetto in mente o vuoi semplicemente fare due chiacchiere, scrivimi!",
+        bottone: "Contattami ora"
+      } 
+  %>
+
+  <%= render 'components/hero2', 
+        titolo: 'Creiamo esperienze digitali uniche',
+        testo: 'Soluzioni tecnologiche su misura per aziende moderne, con focus su innovazione e usabilità.',
+        bottone: 'Scopri di più',
+        image_url: 'https://cdn.pixabay.com/photo/2023/11/19/14/10/hangzhou-8398789_1280.jpg' 
+  %>
 
 
+  <%= render 'components/sponsor', labels: ["Microsoft", "Adobe", "Amazon", "Apple", "Salesforce"] %>
+
+  <%= render 'components/footer', 
+        newsletter_title: "Iscriviti alla nostra newsletter", 
+        newsletter_subtitle: "Ricevi aggiornamenti esclusivi e offerte speciali",
+        assistance_links: [
+          "Supporto tecnico",
+          "Contattaci",
+          "Il mio account",
+          "Stato ordine",
+          "Spedizioni",
+          "Resi e rimborsi",
+          "Pagamenti sicuri",
+          "Domande frequenti",
+          "Garanzia prodotto",
+          "Avvisi di sicurezza"
+        ],
+        info_links: [
+          "Chi siamo",
+          "Lavora con noi",
+          "Area download",
+          "Partner e B2B",
+          "Trova un negozio",
+          "Privacy e termini",
+          "Report di sostenibilità"
+        ],
+        world_links: [
+          "Innovazione",
+          "Tech World",
+          "Sostenibilità",
+          "Prodotti e tecnologie",
+          "Eventi e webinar",
+          "Testimonianze",
+          "Blog e notizie"
+        ],
+        shortcut_links: [
+          "Smartphone",
+          "Accessori",
+          "Wearable",
+          "Casa intelligente",
+          "Audio",
+          "Offerte speciali",
+          "Novità",
+          "Assistenza clienti"
+        ]
+  %>
 
 
-
-
-
-
-
-
-
-
-
-<%= render partial: 'components/portfolio_testimonianze', locals: {
-  titolo_principale: "Portfolio & Testimonianze",
-  titolo_portfolio: "Progetti recenti",
-  titolo_testimonianze: "Cosa dicono i clienti",
-
-  img1: "https://cdn.pixabay.com/photo/2020/08/03/15/53/castle-5460374_1280.jpg",
-  img2: "https://cdn.pixabay.com/photo/2022/12/17/12/34/people-7661651_1280.jpg",
-  img3: "https://cdn.pixabay.com/photo/2020/05/19/11/41/space-5190377_1280.jpg",
-  img4: "https://cdn.pixabay.com/photo/2020/05/02/17/54/tunnel-5122424_1280.jpg",
-  img5: "https://cdn.pixabay.com/photo/2020/03/28/15/20/tunnel-4977439_1280.jpg",
-  img6: "https://cdn.pixabay.com/photo/2023/01/06/13/33/palace-7701252_1280.jpg",
-  img7: "https://cdn.pixabay.com/photo/2020/12/09/21/03/dome-5818580_1280.jpg",
-  img8: "https://cdn.pixabay.com/photo/2016/08/04/21/31/reichstag-dome-1571046_1280.jpg",
-
-  foto_cliente1: "https://randomuser.me/api/portraits/women/68.jpg",
-  testimonianza1: '"Un team professionale e attento ai dettagli, il progetto ha superato le nostre aspettative!"',
-  nome_cliente1: "Maria Rossi",
-
-  foto_cliente2: "https://randomuser.me/api/portraits/men/52.jpg",
-  testimonianza2: '"Assistenza impeccabile e risultati di alta qualità, lo consiglio a chi cerca serietà."',
-  nome_cliente2: "Luca Bianchi",
-
-  foto_cliente3: "https://randomuser.me/api/portraits/women/44.jpg",
-  testimonianza3: '"Ottima comunicazione e risultati perfetti, un piacere lavorare insieme."',
-  nome_cliente3: "Elena Verdi"
+<%= render partial: 'components/banner', locals: { 
+  titolo: "Informativa Cookie", 
+  messaggio: "Cliccando su 'Accetta tutti i cookie', accetti l’uso di cookie per migliorare la tua esperienza di navigazione,", 
+  messaggiodue: " analizzare il traffico e personalizzare contenuti e pubblicità.", 
+  testo_impostazioni: "Gestisci preferenze", 
+  testo_rifiuta: "Rifiuta tutti i cookie", 
+  testo_accetta: "Accetta tutti i cookie", 
+  url_impostazioni: "#"  
 } %>
-   
 
-
-
-
-
-
-
-
-
-<%= render partial: 'components/contatti', locals: { 
-  titolo: "Hai un'idea? Realizziamola insieme.",
-  testo: "Sono sempre aperto a nuove collaborazioni. Se hai un progetto in mente o vuoi semplicemente fare due chiacchiere, scrivimi!",
-  bottone: "Contattami ora",
-} %>
-
-
-
-
-<%= render 'components/hero2', 
-  titolo: 'Creiamo esperienze digitali uniche',
-  testo: 'Soluzioni tecnologiche su misura per aziende moderne, con focus su innovazione e usabilità.',
-  bottone: 'Scopri di più',
-  image_url: 'https://cdn.pixabay.com/photo/2023/11/19/14/10/hangzhou-8398789_1280.jpg'
-%>
-
-
-
-<%= render 'components/sponsor', labels: ["Microsoft", "Adobe", "Amazon ", "Apple ", "Salesforce"] %>
-
-
-
- <%= render 'components/footer', 
-  newsletter_title: "Iscriviti alla newsletter", 
-  newsletter_subtitle: "Per te il 15% di sconto sul primo acquisto", 
-  assistance_links: ["Dashboard assistenza", "Contattaci", "Il tuo account", "Traccia il tuo ordine", "Spedizioni e Consegne", "Resi e Rimborsi", "Pagamenti e Sicurezza", "Registrazione e Ordini", "Sicurezza prodotto", "Avvisi e richiami prodotto"],
-  info_links: ["Guida alle taglie", "Lavora con noi", "Area Download", "Corporate B2B", "Store Locator", "Dichiarazioni di conformità e Note Informative", "Bilanci di Sostenibilità - Archivio"],
-  world_links: ["Culture", "Diadora World", "Sostenibilità", "Tecnologie", "Running Shoe Finder", "Atleti ed Atlete", "Sneaker Agenda"],
-  shortcut_links: ["Stratouno", "Abbigliamento Termico", "Scarpe Made in Italy", "Scarpe Trail Running", "Scarpe Bianche", "Scarpe Nere", "Equipe", "B.560", "Mercury", "Mythos Propulsion 280"]
-%>
-
-
-</div>
 
 </body>
