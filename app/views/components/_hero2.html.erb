@@ -1,16 +1,21 @@
-<div class="relative h-screen max-h-[700px] md:max-h-[900px] lg:max-h-[900px] overflow-hidden">
+<div class="relative h-screen max-h-[700px] md:max-h-[700px] lg:max-h-[700px] overflow-hidden">
   <div class="absolute inset-0 z-0">
     <%= image_tag image_url, alt: 'Atomo Star Background', class: 'w-full h-full object-cover object-center brightness-75' %>
   </div>
 
-  <div class="absolute inset-0 z-10 bg-[#B06C49] opacity-70"></div>
+  <div class="absolute inset-0 z-10 bg-[#A3B18A] opacity-70"></div>
 
-  <div class="relative z-20 h-full flex flex-col md:flex-row items-center md:items-start justify-center md:justify-center px-6 md:px-20 lg:px-32 py-20">
+  <div class="relative z-20 h-full flex flex-col md:flex-row items-start justify-center md:justify-center px-6 md:px-20 lg:px-32 py-20">
     
-    <!-- Colonna testo -->
+    <!-- Spazio vuoto a sinistra -->
+    <div class="hidden md:block flex-1 mr-12 lg:mr-20">
+      <!-- Qui puoi mettere un'immagine o lasciare vuoto -->
+    </div>
+
+    <!-- Colonna testo a destra -->
     <div class="text-white max-w-xl md:max-w-2xl lg:max-w-3xl">
-    <br><br>
-    <br>
+      <br><br>
+      <br>
 
       <h1 class="font-playfair-display text-5xl md:text-6xl lg:text-8xl font-extrabold leading-tight">
         <%= titolo %>
@@ -25,8 +30,5 @@
       </a>
     </div>
 
-
-    <div class="hidden md:block flex-1 ml-12 lg:ml-20">
-    </div>
   </div>
 </div>

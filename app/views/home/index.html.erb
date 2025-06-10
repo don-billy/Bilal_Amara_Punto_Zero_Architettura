@@ -1,3 +1,8 @@
+<body class="bg-[#F9F9F6]">
+
+
+
+
 <%= render partial: 'components/navbar', locals: { 
   sconti: "CODICE: EXTRA | -20% sull'outlet. -30% sopra i 60€", 
   links: ["Uomo", "Donna", "Bambini", "Sport", "Heritage", "Culture", "Mid-Season Sales"] 
@@ -5,8 +10,14 @@
 
 
 
-<%= render 'components/hero', title: 'Atomo Star', subtitle: 'Principles of Italian Innovation',
-image_url: 'https://cdn.pixabay.com/photo/2024/08/03/10/09/construction-8941880_1280.jpg' %>
+<%= render 'components/hero', 
+titolo: 'Progettiamo spazi innovativi e sostenibili', 
+testo: 'Architettura moderna per privati e aziende, con un’attenzione particolare alla sostenibilità ambientale e al design funzionale.',
+bottone: 'Scopri i nostri progetti', 
+image_url: 'https://cdn.pixabay.com/photo/2024/08/03/10/09/construction-8941880_1280.jpg'
+
+
+%>
 
 
 
@@ -16,8 +27,11 @@ image_url: 'https://cdn.pixabay.com/photo/2024/08/03/10/09/construction-8941880_
   
 } %>
 
+<%= render partial: 'components/chisiamo', locals: { 
+  testo1: "Dietro ogni progetto di Punto Zero c’è un team affiatato di professionisti con competenze trasversali e una visione condivisa: trasformare ogni spazio in un’opera unica, funzionale e sostenibile.",
+  testo2: "Grazie alla collaborazione tra architetti, interior designer e project manager, garantiamo un risultato che unisce estetica e innovazione."
+} %>
 
-<%= render partial: 'components/chisiamo' %>
 
 <div class=" flex items-center justify-center gap-4 bg-[#F9F9F6]">
   <div class="flex-1 h-px bg-gradient-to-r from-transparent via-[#b08d57] to-transparent bg-[#F9F9F6]"></div>
@@ -93,93 +107,34 @@ image_url: 'https://cdn.pixabay.com/photo/2024/08/03/10/09/construction-8941880_
 
 
 
-<section class="w-full px-6 md:px-12 py-20 bg-[#F9F9F6]">
-  <h2 class="text-5xl font-extrabold text-[#A3B18A] text-center">Portfolio & Testimonianze</h2>
-  <br><br><br>
 
-  <div class="flex flex-col lg:flex-row gap-16 items-center">
-    
-    <!-- Portfolio -->
-    <div class="w-full lg:w-1/2">
-  <h3 class="text-2xl font-semibold text-gray-700 text-center mb-12 border-b-2 border-[#cd7f32] inline-block pb-2">Progetti recenti</h3>
+<%= render partial: 'components/portfolio_testimonianze', locals: {
+  titolo_principale: "Portfolio & Testimonianze",
+  titolo_portfolio: "Progetti recenti",
+  titolo_testimonianze: "Cosa dicono i clienti",
 
-  <!-- Layout mobile -->
-  <div class="flex flex-wrap gap-4 justify-center items-center md:hidden">
-    <img src="https://cdn.pixabay.com/photo/2021/12/22/10/59/tunnel-6887276_1280.jpg" class="w-36 h-36 object-cover rounded-lg border-4 border-white shadow-md" alt="Foto 1" />
-    <img src="https://cdn.pixabay.com/photo/2022/08/10/17/31/bridge-7377716_1280.jpg" class="w-36 h-36 object-cover rounded-lg border-4 border-white shadow-md" alt="Foto 2" />
-    <img src="https://cdn.pixabay.com/photo/2016/11/21/12/26/tunnel-1845046_1280.jpg" class="w-36 h-36 object-cover rounded-lg border-4 border-white shadow-md" alt="Foto 3" />
-    <img src="https://cdn.pixabay.com/photo/2019/06/15/16/37/tunnel-4276025_1280.jpg" class="w-36 h-36 object-cover rounded-lg border-4 border-white shadow-md" alt="Foto 4" />
-    <img src="https://cdn.pixabay.com/photo/2020/05/02/17/54/tunnel-5122424_1280.jpg" class="w-36 h-36 object-cover rounded-lg border-4 border-white shadow-md" alt="Foto 5" />
-    <img src="https://cdn.pixabay.com/photo/2015/12/03/00/58/architect-1073599_1280.jpg" class="w-36 h-36 object-cover rounded-lg border-4 border-white shadow-md" alt="Foto 6" />
-    <img src="https://cdn.pixabay.com/photo/2023/01/02/13/03/architect-7692052_1280.jpg" class="w-36 h-36 object-cover rounded-lg border-4 border-white shadow-md" alt="Foto 7" />
-    <img src="https://cdn.pixabay.com/photo/2020/01/20/22/21/palace-4781577_1280.jpg" class="w-36 h-36 object-cover rounded-lg border-4 border-white shadow-md" alt="Foto 8" />
-    
-  </div>
+  img1: "https://cdn.pixabay.com/photo/2020/08/03/15/53/castle-5460374_1280.jpg",
+  img2: "https://cdn.pixabay.com/photo/2022/12/17/12/34/people-7661651_1280.jpg",
+  img3: "https://cdn.pixabay.com/photo/2020/05/19/11/41/space-5190377_1280.jpg",
+  img4: "https://cdn.pixabay.com/photo/2020/05/02/17/54/tunnel-5122424_1280.jpg",
+  img5: "https://cdn.pixabay.com/photo/2020/03/28/15/20/tunnel-4977439_1280.jpg",
+  img6: "https://cdn.pixabay.com/photo/2023/01/06/13/33/palace-7701252_1280.jpg",
+  img7: "https://cdn.pixabay.com/photo/2020/12/09/21/03/dome-5818580_1280.jpg",
+  img8: "https://cdn.pixabay.com/photo/2016/08/04/21/31/reichstag-dome-1571046_1280.jpg",
 
+  foto_cliente1: "https://randomuser.me/api/portraits/women/68.jpg",
+  testimonianza1: '"Un team professionale e attento ai dettagli, il progetto ha superato le nostre aspettative!"',
+  nome_cliente1: "Maria Rossi",
 
-  <!-- Layout desktop -->
-  <div class="relative mx-auto hidden md:block h-[600px] max-w-[500px]">
-    <img src="https://cdn.pixabay.com/photo/2021/12/22/10/59/tunnel-6887276_1280.jpg"
-      class="absolute top-0 left-[-95%] w-28 h-28 md:w-60 md:h-60 object-cover rounded-lg border-8 border-white shadow-xl rotate-[-6deg] z-10" alt="Foto 1" />
-    <img src="https://cdn.pixabay.com/photo/2022/08/10/17/31/bridge-7377716_1280.jpg"
-      class="absolute top-6 left-[-35%] w-28 h-28 md:w-60 md:h-60 object-cover rounded-lg border-8 border-white shadow-xl rotate-[4deg] z-20" alt="Foto 2" />
-    <img src="https://cdn.pixabay.com/photo/2016/11/21/12/26/tunnel-1845046_1280.jpg"
-      class="absolute top-0 left-[18%] w-28 h-28 md:w-60 md:h-60 object-cover rounded-lg border-8 border-white shadow-xl rotate-[-2deg] z-10" alt="Foto 3" />
-    <img src="https://cdn.pixabay.com/photo/2019/06/15/16/37/tunnel-4276025_1280.jpg"
-      class="absolute top-10 left-[85%] w-28 h-28 md:w-60 md:h-60 object-cover rounded-lg border-8 border-white shadow-xl rotate-[5deg] z-20" alt="Foto 4" />
-    <img src="https://cdn.pixabay.com/photo/2020/05/02/17/54/tunnel-5122424_1280.jpg"
-      class="absolute top-[50%] left-[-95%] w-28 h-28 md:w-60 md:h-60 object-cover rounded-lg border-8 border-white shadow-xl rotate-[2deg] z-10" alt="Foto 5" />
-    <img src="https://cdn.pixabay.com/photo/2015/12/03/00/58/architect-1073599_1280.jpg"
-      class="absolute top-[54%] left-[-32%] w-28 h-28 md:w-60 md:h-60 object-cover rounded-lg border-8 border-white shadow-xl rotate-[-3deg] z-20" alt="Foto 6" />
-    <img src="https://cdn.pixabay.com/photo/2023/01/02/13/03/architect-7692052_1280.jpg"
-      class="absolute top-[50%] left-[22%] w-28 h-28 md:w-60 md:h-60 object-cover rounded-lg border-8 border-white shadow-xl rotate-[4deg] z-10" alt="Foto 7" />
-    <img src="https://cdn.pixabay.com/photo/2020/01/20/22/21/palace-4781577_1280.jpg"
-      class="absolute top-[58%] left-[85%] w-28 h-28 md:w-60 md:h-60 object-cover rounded-lg border-8 border-white shadow-xl rotate-[-5deg] z-20" alt="Foto 8" />
-  </div>
-</div>
+  foto_cliente2: "https://randomuser.me/api/portraits/men/52.jpg",
+  testimonianza2: '"Assistenza impeccabile e risultati di alta qualità, lo consiglio a chi cerca serietà."',
+  nome_cliente2: "Luca Bianchi",
 
-
-    <!-- Testimonianze -->
-    <div class="w-full lg:w-1/2 bg-[#FAF8F5] rounded-lg p-8 ">
-      <h3 class="text-2xl font-semibold text-gray-700 mb-6 border-b-2 border-bronze-500 inline-block pb-2">Cosa dicono i clienti</h3>
-
-      <div class="space-y-8">
-        <div class="flex items-center gap-4">
-          <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Cliente 1" class="w-14 h-14 rounded-full object-cover border-2 border-bronze-500">
-          <div>
-            <p class="text-gray-800 italic">"Un team professionale e attento ai dettagli, il progetto ha superato le nostre aspettative!"</p>
-            <p class="font-semibold text-bronze-600 mt-2">— Maria Rossi</p>
-          </div>
-        </div>
-        <div class="flex items-center gap-4">
-          <img src="https://randomuser.me/api/portraits/men/52.jpg" alt="Cliente 2" class="w-14 h-14 rounded-full object-cover border-2 border-bronze-500">
-          <div>
-            <p class="text-gray-800 italic">"Assistenza impeccabile e risultati di alta qualità, lo consiglio a chi cerca serietà."</p>
-            <p class="font-semibold text-bronze-600 mt-2">— Luca Bianchi</p>
-          </div>
-        </div>
-        <div class="flex items-center gap-4">
-          <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Cliente 3" class="w-14 h-14 rounded-full object-cover border-2 border-bronze-500">
-          <div>
-            <p class="text-gray-800 italic">"Ottima comunicazione e risultati perfetti, un piacere lavorare insieme."</p>
-            <p class="font-semibold text-bronze-600 mt-2">— Elena Verdi</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<style>
-  /* Colore bronzo personalizzato */
-  .border-bronze-500 {
-    border-color: #b87333;
-  }
-  .text-bronze-600 {
-    color: #b87333;
-  }
-</style>
+  foto_cliente3: "https://randomuser.me/api/portraits/women/44.jpg",
+  testimonianza3: '"Ottima comunicazione e risultati perfetti, un piacere lavorare insieme."',
+  nome_cliente3: "Elena Verdi"
+} %>
+   
 
 
 
@@ -189,9 +144,38 @@ image_url: 'https://cdn.pixabay.com/photo/2024/08/03/10/09/construction-8941880_
 
 
 
+<%= render partial: 'components/contatti', locals: { 
+  titolo: "Hai un'idea? Realizziamola insieme.",
+  testo: "Sono sempre aperto a nuove collaborazioni. Se hai un progetto in mente o vuoi semplicemente fare due chiacchiere, scrivimi!",
+  bottone: "Contattami ora",
+} %>
 
+
+
+
+<%= render 'components/hero2', 
+  titolo: 'Creiamo esperienze digitali uniche',
+  testo: 'Soluzioni tecnologiche su misura per aziende moderne, con focus su innovazione e usabilità.',
+  bottone: 'Scopri di più',
+  image_url: 'https://cdn.pixabay.com/photo/2023/11/19/14/10/hangzhou-8398789_1280.jpg'
+%>
+
+
+
+<%= render 'components/sponsor', labels: ["Microsoft", "Adobe", "Amazon ", "Apple ", "Salesforce"] %>
+
+
+
+ <%= render 'components/footer', 
+  newsletter_title: "Iscriviti alla newsletter", 
+  newsletter_subtitle: "Per te il 15% di sconto sul primo acquisto", 
+  assistance_links: ["Dashboard assistenza", "Contattaci", "Il tuo account", "Traccia il tuo ordine", "Spedizioni e Consegne", "Resi e Rimborsi", "Pagamenti e Sicurezza", "Registrazione e Ordini", "Sicurezza prodotto", "Avvisi e richiami prodotto"],
+  info_links: ["Guida alle taglie", "Lavora con noi", "Area Download", "Corporate B2B", "Store Locator", "Dichiarazioni di conformità e Note Informative", "Bilanci di Sostenibilità - Archivio"],
+  world_links: ["Culture", "Diadora World", "Sostenibilità", "Tecnologie", "Running Shoe Finder", "Atleti ed Atlete", "Sneaker Agenda"],
+  shortcut_links: ["Stratouno", "Abbigliamento Termico", "Scarpe Made in Italy", "Scarpe Trail Running", "Scarpe Bianche", "Scarpe Nere", "Equipe", "B.560", "Mercury", "Mythos Propulsion 280"]
+%>
 
 
 </div>
 
-
+</body>

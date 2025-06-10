@@ -1,0 +1,30 @@
+<div class="w-full bg-[#F9F9F6] py-6">
+  <div class="max-w-5xl mx-auto px-2 py-3 rounded-lg">
+    <h2 class="text-3xl md:text-4xl font-bold text-[#383936] mb-1 text-center">
+      I nostri Sponsor
+    </h2>
+
+    <div class="flex flex-wrap justify-center gap-2 mt-5 md:grid md:grid-cols-5 md:gap-1 md:overflow-x-visible overflow-x-auto scrollbar-hide">
+      <% labels.each do |label| %>
+        <a href="#" class="w-[30%] sm:w-[20%] md:min-w-0 md:w-auto flex-shrink-0 group block border rounded-full hover:border-gray-400 transition-colors duration-100">
+          <div class="p-0.5 h-12 md:h-14 flex items-center justify-center bg-[#B06C49] hover:bg-[#A3B18A] rounded-full">
+            <span class="text-[11px] md:text-xs font-medium text-[#F9F9F6] uppercase tracking-tight px-1">
+              <b><%= label %></b>
+            </span>
+          </div>
+        </a>
+      <% end %>
+    </div>
+  </div>
+  <br><br><br><br>
+</div>
+
+<style>
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+</style>
